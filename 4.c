@@ -3,7 +3,7 @@
 
 int main()
 {
-        int a,b;
+        int a,b,answer=0;
 
         for(a = 999; a > 99; a--) {
             for(b = 999; b > 99; b--) {
@@ -18,10 +18,14 @@ int main()
                     n = n / 10;
 
                     if(c == reverse) {
-                        printf("%d", n);
+                        if(c > answer) {
+                            answer = c;
+                        }
                     }
                 }
 
             }
         }
+
+        printf("The correct answer is: %d\n", answer);
 }
